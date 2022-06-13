@@ -1,0 +1,77 @@
+/* BASE */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+/* HEADERS */
+
+.month-head-container {
+    width: 100%;
+    height: 4rem;
+    background-color: cyan;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.month-head-container>* {
+    font-size: 30px;
+    padding: 0 2rem;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+.day-head-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+/* CALENDAR */
+
+.calendar-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    margin: 0 1rem;
+    gap: 0.2rem;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.day-block {
+    background-color: hotpink;
+    height: 5rem;
+    border-radius: 5%;
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dim-day {
+    background-color: gray;
+}
+
+.todo-count {
+    background-color: red;
+    border-radius: 10rem;
+    height: 2rem;
+    width: 2rem;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* OBJECT-HELPERS */
+
+.center-text {
+    text-align: center;
+}
