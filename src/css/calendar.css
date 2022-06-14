@@ -31,11 +31,17 @@
 .day-head-container {
     display: flex;
     justify-content: space-evenly;
+    max-width: 80%;
 }
 
 
 
 /* CALENDAR */
+
+.main-center {
+    max-width: 80%;
+    margin: auto;
+}
 
 .calendar-grid-container {
     display: grid;
