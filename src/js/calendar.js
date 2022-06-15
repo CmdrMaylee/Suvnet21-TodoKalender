@@ -1,30 +1,99 @@
+/* DEFAULTS */
+
 document.addEventListener('DOMContentLoaded', main)
 
 function main() {
-    const currentDate = new Date()
-    addEventListeners(currentDate)
-    document.getElementById('stuffsi').innerHTML = currentDate.getFullYear() + '/' + convertMonth(currentDate.getMonth())
+    const activeDate = new Date()
+    addEventListeners(activeDate)
+    renderCalendarView(activeDate)
 }
+
 
 
 function addEventListeners(date) {
     const previousArrow = document.getElementById("previous-month-arrow")
     const nextArrow = document.getElementById("next-month-arrow")
 
-    nextArrow.addEventListener('click', incrementMonth(date))
+    previousArrow.addEventListener('click', function () { decrementMonth(date) })
+    nextArrow.addEventListener('click', function () { incrementMonth(date) })
 }
 
-/**
- * 
- * @param {Date} date 
- */
+function decrementMonth(date) {
+    date.setMonth(date.getMonth() - 1)
+    renderCalendarView(date)
+}
+
 function incrementMonth(date) {
-    if (date.getMonth() == 11) {
-        date.setFullYear(date.getFullYear()++)
+    date.setMonth(date.getMonth() + 1)
+    renderCalendarView(date)
+}
+
+
+
+/* RENDER ELEMENTS */
+
+function renderCalendarView(date) {
+    renderMonthHeader(date)
+    emptyCalendar()
+    fillCalendar(date)
+}
+
+function renderMonthHeader(date) {
+    document.getElementById('current-year-and-month').innerHTML = date.getFullYear() + '/' + convertMonth(date.getMonth())
+}
+
+function renderEmptyDayBlock() {
+    let emptyBlock = document.createElement('div')
+    emptyBlock.className = 'day-block dim-day'
+    const calendarView = document.getElementById('calendar-view')
+    calendarView.appendChild(emptyBlock)
+}
+
+function renderNumberedDay(num) {
+    let dayBlock = document.createElement('div')
+    dayBlock.className = 'day-block'
+    dayBlock.innerHTML = num
+    const calendarView = document.getElementById('calendar-view')
+    calendarView.appendChild(dayBlock)
+}
+
+
+
+/* MANIPULATE CALENDAR */
+
+function emptyCalendar() {
+    const calendar = document.getElementById('calendar-view')
+    while (calendar.lastChild) { calendar.removeChild(calendar.lastChild) }
+}
+
+function fillCalendar(date) {
+    const firstDayOfMonth = getFirstDayOfMonthReturnDate(date)
+    const currentMonthDayCount = getLastDayOfMonthReturnDate(date)
+    const calendarView = document.getElementById('calendar-view')
+
+    let dayCount = 1;
+    for (let i = 1; i < currentMonthDayCount.getDate(); i++) {
+        if (i < firstDayOfMonth.getDay() || i > currentMonthDayCount) {
+            renderEmptyDayBlock()
+        } else {
+            renderNumberedDay(dayCount)
+            dayCount += 1
+        }
     }
-    date.setDate(date.getDate() + 1)
-    console.log(date.getMonth())
-    // renderCalendarView()
+
+    while (calendarView.childElementCount % 7 != 0) { renderEmptyDayBlock() }
+}
+
+
+
+/* CALENDAR HELPERS */
+
+function getFirstDayOfMonthReturnDate(date) {
+    return new Date(date.getFullYear(), date.getMonth(), 1)
+}
+
+function getLastDayOfMonthReturnDate(date) {
+    return new Date(date.getFullYear(), date.getMonth() + 1, 0)
 }
 
 function convertMonth(monthNum) {
