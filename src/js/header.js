@@ -55,11 +55,10 @@ function dateConvert(dateobj, format) {
 }
 
 function main() {
-  countTodosInLocalStorage()
-
+  headerCountNumOfTotalTodos()
 }
 
-function countTodosInLocalStorage() {
+function headerCountNumOfTotalTodos() {
   let items = JSON.parse(localStorage.getItem('todos'))
 
   const header = document.getElementById('todo-counter')
