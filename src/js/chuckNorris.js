@@ -1,7 +1,8 @@
 const jokeBtn = document.getElementById("jokeBtn");
 const chuckText = document.getElementById("chuckText");
+const modalContent = document.getElementById("modal-content");
 
-addEventListener("click", () => {
+jokeBtn.addEventListener("click", () => {
   console.log("clicked the button");
   const url = "https://api.chucknorris.io/jokes/random?category=dev";
   fetch(url)

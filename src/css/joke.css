@@ -4,14 +4,16 @@
 .jokeBox {
   color: hotpink;
 }
-
+.jokeBtn {
+  height: 2rem;
+  width: 3rem;
+}
 .chuckNorris {
   cursor: pointer;
 }
 .chuckNorris:hover {
   opacity: 0.5;
 }
-
 .mpopup {
   display: none;
   position: fixed;
@@ -43,7 +45,7 @@
   padding: 2px 12px;
   background-color: hotpink;
   color: #333;
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 4px solid #e9ecef;
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
 }
@@ -59,7 +61,7 @@
   padding: 1rem;
   background-color: hotpink;
   color: #333;
-  border-top: 1px solid #e9ecef;
+  border-top: 4px solid #e9ecef;
   border-bottom-left-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
   text-align: right;
