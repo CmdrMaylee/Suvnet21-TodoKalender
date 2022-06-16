@@ -1,3 +1,9 @@
-html {
-    background-color: hotpink;
+.background-gradient-div {
+    position: fixed;
+    top: 0;
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 105, 180, 1) 100%);
 }
