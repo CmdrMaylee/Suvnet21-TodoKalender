@@ -69,19 +69,23 @@ function emptyCalendar() {
 function fillCalendar(date) {
     const firstDayOfMonth = getFirstDayOfMonthReturnDate(date)
     const currentMonthDayCount = getLastDayOfMonthReturnDate(date)
-    const calendarView = document.getElementById('calendar-view')
 
+    let totalElements = 0;
     let dayCount = 1;
-    for (let i = 1; i < currentMonthDayCount.getDate(); i++) {
-        if (i < firstDayOfMonth.getDay() || i > currentMonthDayCount) {
+    for (let i = 1; dayCount <= currentMonthDayCount.getDate(); i++) {
+        if (i < firstDayOfMonth.getDay()) {
             renderEmptyDayBlock()
         } else {
             renderNumberedDay(dayCount)
             dayCount += 1
         }
+        totalElements++
     }
 
-    while (calendarView.childElementCount % 7 != 0) { renderEmptyDayBlock() }
+    while (totalElements % 7 != 0) {
+        renderEmptyDayBlock()
+        totalElements++
+    }
 }
 
 
