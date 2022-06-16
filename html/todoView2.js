@@ -10,11 +10,12 @@ window.addEventListener("load", () => {
       date: e.target.elements.date.value,
     };
 
-    if (!todo.date || !todo.content) {
+    if (!todo.date || !todo.content.trim()) {
       console.log("no values");
       alert("please provide both date input and todo input");
     } else {
       console.log("success");
+      console.log(todo);
       todos.push(todo);
     }
 
@@ -53,9 +54,8 @@ function DisplayTodos() {
     // edit.classList.add("edit");
     deleteButton.classList.add("delete");
 
-    content.innerHTML =
-      `<input type="text" value="${todo.content}" readonly>` +
-      `<input type="text" value="${todo.date}" readonly>`;
+    content.innerHTML = `<div class="div-todo"> ${todo.content}<br>${todo.date}<br><div></div></div>`;
+    // `<div class="div-todo"> ${todo.date}</div>`;
     // date.innerHTML = `<input type="text" value="${todo.date}" >`;
     // edit.innerHTML = "Edit";
     deleteButton.innerHTML = "Delete";
