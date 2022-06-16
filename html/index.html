@@ -5,14 +5,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/globalStyle.css">
-    <link rel="stylesheet" href="./src/css/_desktopQuery.css">
-    <link rel="stylesheet" href="./src/css/mobileQuery.css">
+    <link rel="stylesheet" href="../src/css/globalStyle.css">
+    <link rel="stylesheet" href="../src/css/_desktopQuery.css">
+    <link rel="stylesheet" href="../src/css/mobileQuery.css">
+    <link rel="stylesheet" href="../src/css/calendar.css">
+    <link rel="stylesheet" href="../src/css/header.css">
+    <link rel="stylesheet" href="../src/css/todos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <title>Todo Orange</title>
+    <script src="../src/js/todo.js"></script>
+    <script src="../src/js/calendar.js"></script>
+    <script src="../src/js/header.js"></script>
 </head>
 
 <body>
+    <header class="header parent align-items overflow">
+        <div class="child">
+            <div class="child">The weather is great</div>
+        </div>
+        <div class="child overflow">Hello and welcome to this hot, pink Calender</div>
+        <div class="child overflow">The day is
+            <p id="datetimecounter"></p>
+        </div>
+    </header>
+    <div class="month-head-container">
+        <span class="material-icons md-48" id="previous-month-arrow">west</span>
+        <p id="current-year-and-month"></p>
+        <span class="material-icons md-48" id="next-month-arrow">east</span>
+    </div>
+    <div class="main-center">
+        <div class="calendar-grid-container center-text">
+            <p>Monday</p>
+            <p>Tuesday</p>
+            <p>Wednesday</p>
+            <p>Thursday</p>
+            <p>Friday</p>
+            <p>Saturday</p>
+            <p>Sunday</p>
+        </div>
+    </div>
+    <div class="main-center">
+        <div class="calendar-grid-container" id="calendar-view">
+            <!-- <div class="day-block">
+                <p>1</p>
+                <p class="todo-count">3</p>
+            </div>-->
 
+            <!-- <div class="day-block dim-day"></div>
+            <div class="day-block dim-day"></div>
+            <div class="day-block dim-day"></div> -->
+        </div>
+    </div>
+    <section class="create-todo">
+        <form id="new-todo-form">
+            <input type="date" name="date" id="date">
+            <input type="text" placeholder="Write todo" name="content" id="content" />
+            <input type="submit" value="Add todo" />
+        </form>
+    </section>
+    <section class="todo-list">
+        <div class="list" id="todo-list"></div>
+    </section>
 </body>
 
 </html>
