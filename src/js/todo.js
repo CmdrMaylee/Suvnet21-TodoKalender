@@ -24,6 +24,7 @@ window.addEventListener("load", () => {
 
     // Reset the form
     e.target.reset();
+    headerCountNumOfTotalTodos()
 
     DisplayTodos();
   });
@@ -88,6 +89,7 @@ function DisplayTodos() {
     deleteButton.addEventListener("click", (e) => {
       todos = todos.filter((t) => t != todo);
       localStorage.setItem("todos", JSON.stringify(todos));
+      headerCountNumOfTotalTodos()
       DisplayTodos();
     });
   });

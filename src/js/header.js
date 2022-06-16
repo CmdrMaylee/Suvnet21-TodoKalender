@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', main)
+
 setInterval(function () {
   var date = new Date();
   var format = "YYYY-MMM-DD DDD";
@@ -50,4 +52,15 @@ function dateConvert(dateobj, format) {
   //return converted_date;
   // to show it I used innerHTMl in a <p> tag
   document.getElementById("datetimecounter").innerHTML = converted_date;
+}
+
+function main() {
+  headerCountNumOfTotalTodos()
+}
+
+function headerCountNumOfTotalTodos() {
+  let items = JSON.parse(localStorage.getItem('todos'))
+
+  const header = document.getElementById('todo-counter')
+  header.innerHTML = items.length + ' total todos'
 }
