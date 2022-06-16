@@ -12,17 +12,38 @@
     <link rel="stylesheet" href="../src/css/header.css">
     <link rel="stylesheet" href="../src/css/todos.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/joke.css">
 
     <title>Todo Orange</title>
     <script src="../src/js/todo.js"></script>
     <script src="../src/js/calendar.js"></script>
     <script src="../src/js/header.js"></script>
+
 </head>
 
 <body>
     <header class="header parent align-items overflow">
         <div class="child">
-            <div class="child">The weather is great</div>
+            <!-- <p id="chuckText" class="child jokeBox"></p> -->
+            <!-- Link to trigger modal -->
+            <!-- <a href="javascript:void(0);" class="btn btn-primary" id="mpopupLink">Launch Modal Popup</a> -->
+            <img src="../src/img/chuckNorris.png" class="chuckNorris" id="mpopupLink" alt="">
+            <!-- Modal popup box -->
+            <div id="mpopupBox" class="mpopup">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">×</span>
+                        <h2>Chuck Norris Jokes</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p id="chuckText" class="child jokeBox"></p>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="child overflow">Hello and welcome to this hot, pink Calender</div>
         <div class="child overflow">The day is
@@ -68,5 +89,6 @@
         <div class="list" id="todo-list"></div>
     </section>
 </body>
+<script src="../src/js/chuckNorris.js"></script>
 
 </html>
