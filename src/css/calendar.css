@@ -13,25 +13,29 @@
 .month-head-container {
     width: 100%;
     height: 4rem;
-    background-color: cyan;
+    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: rgb(255, 105, 180);
 }
 
 .month-head-container>* {
-    font-size: 30px;
+    font-size: 2.5rem;
     padding: 0 2rem;
+    font-weight: 900;
 }
 
 .material-icons.md-48 {
-    font-size: 48px;
+    font-size: 76px;
 }
 
 .day-head-container {
     display: flex;
     justify-content: space-evenly;
     max-width: 80%;
+    margin-top: 1rem;
+    background-color: white;
 }
 
 
@@ -43,10 +47,16 @@
     margin: auto;
 }
 
+#day-header {
+    margin: 1rem 0;
+    background-color: hotpink;
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
 .calendar-grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
-    margin: 0 1rem;
     gap: 0.2rem;
     grid-template-columns: repeat(7, minmax(0, 1fr));
 }
