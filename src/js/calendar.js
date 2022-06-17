@@ -1,12 +1,12 @@
 /* DEFAULTS */
 
-document.addEventListener('DOMContentLoaded', main)
+/* document.addEventListener('DOMContentLoaded', main)
 
 function main() {
     const activeDate = new Date()
     addEventListeners(activeDate)
     renderCalendarView(activeDate)
-}
+} */
 
 
 

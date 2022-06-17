@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+/* window.addEventListener("load", () => {
   todos = JSON.parse(localStorage.getItem("todos")) || [];
   const newTodoForm = document.querySelector("#new-todo-form");
 
@@ -31,7 +31,7 @@ window.addEventListener("load", () => {
   });
 
   DisplayTodos();
-});
+}); */
 
 function DisplayTodos() {
   const todoList = document.querySelector(".todo-list");
@@ -87,12 +87,12 @@ function DisplayTodos() {
     //   });
     // });
 
-    deleteButton.addEventListener("click", (e) => {
+    /* deleteButton.addEventListener("click", (date) => {
       todos = todos.filter((t) => t != todo);
       localStorage.setItem("todos", JSON.stringify(todos));
       headerCountNumOfTotalTodos()
-      // renderCalendarView() // TODO CREATE MAIN.JS
+      renderCalendarView(date)
       DisplayTodos();
-    });
+    }); */
   });
 }
