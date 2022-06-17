@@ -62,5 +62,6 @@ function headerCountNumOfTotalTodos() {
   let items = JSON.parse(localStorage.getItem('todos'))
 
   const header = document.getElementById('todo-counter')
-  header.innerHTML = items.length + ' total todos'
+  if (items != null) header.innerHTML = items.length + ' total todos'
+  else header.innerHTML = '0 total todos'
 }

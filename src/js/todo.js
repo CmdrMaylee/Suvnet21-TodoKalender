@@ -25,6 +25,7 @@ window.addEventListener("load", () => {
     // Reset the form
     e.target.reset();
     headerCountNumOfTotalTodos()
+    // renderCalendarView() // TODO CREATE MAIN.JS
 
     DisplayTodos();
   });
@@ -90,6 +91,7 @@ function DisplayTodos() {
       todos = todos.filter((t) => t != todo);
       localStorage.setItem("todos", JSON.stringify(todos));
       headerCountNumOfTotalTodos()
+      // renderCalendarView() // TODO CREATE MAIN.JS
       DisplayTodos();
     });
   });
