@@ -5,8 +5,16 @@
   color: hotpink;
 }
 .jokeBtn {
-  height: 2rem;
-  width: 3rem;
+  width: 10rem;
+  height: 5rem;
+  background-color: black;
+  color: hotpink;
+  padding: 1rem red;
+  border: 0.2rem solid white;
+}
+.jokeBtn:hover {
+  color: black;
+  background-color: hotpink;
 }
 .chuckNorris {
   cursor: pointer;
