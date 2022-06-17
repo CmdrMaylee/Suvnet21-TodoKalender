@@ -35,4 +35,5 @@ header {
   background: hotpink;
   border: 2px solid black;
   font-weight: bolder;
+  user-select: none;
 }
