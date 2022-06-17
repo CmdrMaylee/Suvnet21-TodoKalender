@@ -49,10 +49,19 @@ function renderEmptyDayBlock() {
     calendarView.appendChild(emptyBlock)
 }
 
-function renderNumberedDay(num) {
+function renderNumberedDay(date, num) {
     let dayBlock = document.createElement('div')
     dayBlock.className = 'day-block'
     dayBlock.innerHTML = num
+
+    const thisDaysTodoArray = countTodosForDayBlock(date, num)
+    // console.log(date.getMonth() + ' on the ' + num + ' has ' + thisDaysTodoCount.length + ' many todos')
+    if (thisDaysTodoArray.length !== 0) {
+        let todoCounterOnDay = document.createElement('div')
+        todoCounterOnDay.className = 'todo-count'
+        todoCounterOnDay.innerHTML = thisDaysTodoArray.length
+        dayBlock.appendChild(todoCounterOnDay)
+    }
     const calendarView = document.getElementById('calendar-view')
     calendarView.appendChild(dayBlock)
 }
@@ -76,7 +85,7 @@ function fillCalendar(date) {
         if (i < firstDayOfMonth.getDay()) {
             renderEmptyDayBlock()
         } else {
-            renderNumberedDay(dayCount)
+            renderNumberedDay(date, dayCount)
             dayCount += 1
         }
         totalElements++
@@ -91,6 +100,18 @@ function fillCalendar(date) {
 
 
 /* CALENDAR HELPERS */
+
+function countTodosForDayBlock(date, dayNum) {
+    const allTodos = JSON.parse(localStorage.getItem('todos'))
+    let result = []
+    for (const todo of allTodos) {
+        const todoDate = new Date(todo.date)
+        if (todoDate.getFullYear() === date.getFullYear() && todoDate.getMonth() === date.getMonth() && todoDate.getDate() === dayNum) {
+            result.push(todo)
+        }
+    }
+    return result
+}
 
 function getFirstDayOfMonthReturnDate(date) {
     return new Date(date.getFullYear(), date.getMonth(), 1)
