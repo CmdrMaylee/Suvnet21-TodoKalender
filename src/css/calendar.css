@@ -9,7 +9,7 @@
 /* HEADERS */
 
 .month-head-container {
-  margin-left: 10%;
+  margin: auto;
   width: 80%;
   height: 4rem;
   background-color: black;
@@ -42,6 +42,8 @@
   background-color: black;
   color: hotpink;
   cursor: pointer;
+  border-style: solid;
+  border-color: hotpink;
 }
 .day-head-container {
   display: flex;
