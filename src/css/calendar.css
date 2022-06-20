@@ -19,17 +19,12 @@
   color: rgb(255, 105, 180);
 }
 
-.month-head-container > * {
-  font-size: 5rem;
-  font-weight: 900;
-}
 .year-and-month {
   font-size: 3rem;
   font-weight: 900;
-  border-style: solid;
   border-color: hotpink;
-  border-radius: 25%;
   user-select: none;
+  padding-top: 1rem;
 }
 
 .material-icons.md-48 {

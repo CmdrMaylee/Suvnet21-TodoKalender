@@ -50,7 +50,7 @@ input[type='checkbox'] {
 }
 .collapsible-content .content-inner {
   
-  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom: none;
 
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
