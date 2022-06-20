@@ -33,6 +33,7 @@
   font-size: 3.7rem;
   width: 10rem;
 }
+
 .material-icons.md-48:hover {
   background-color: black;
   color: hotpink;
@@ -40,6 +41,7 @@
   border-style: solid;
   border-color: hotpink;
 }
+
 .day-head-container {
   display: flex;
   justify-content: space-evenly;
@@ -82,7 +84,7 @@
 }
 
 .dim-day {
-  background-color: gray;
+  background-color: rgba(255, 105, 180, 0.5);
 }
 
 .todo-count {

@@ -31,6 +31,11 @@ function renderEmptyDayBlock() {
     calendarView.appendChild(emptyBlock);
 }
 
+/**
+ * 
+ * @param {Date} date 
+ * @param {*} num 
+ */
 function renderNumberedDay(date, num) {
     let dayBlock = document.createElement("div");
     dayBlock.className = "day-block";
@@ -38,8 +43,20 @@ function renderNumberedDay(date, num) {
 
     const thisDaysTodoArray = countTodosForDayBlock(date, num);
     // console.log(date.getMonth() + ' on the ' + num + ' has ' + thisDaysTodoCount.length + ' many todos')
+    let selectedDate = new Date(date);
+    selectedDate.setDate(num)
     if (thisDaysTodoArray.length !== 0) {
         let todoCounterOnDay = document.createElement("div");
+        todoCounterOnDay.addEventListener("click", () => {
+            emptyTodoView();
+            if (!selectedDateForTodos || selectedDateForTodos !== selectedDate) {
+                selectedDateForTodos = selectedDate;
+                printTodos(selectedDate);
+            } else {
+                selectedDateForTodos = "";
+                printTodos();
+            }
+        })
         todoCounterOnDay.className = "todo-count";
         todoCounterOnDay.innerHTML = thisDaysTodoArray.length;
         dayBlock.appendChild(todoCounterOnDay);
