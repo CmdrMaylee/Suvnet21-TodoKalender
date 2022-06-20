@@ -20,7 +20,7 @@
 .chuckNorris {
   cursor: url("../img/chuckNorrisIcon.png"), auto;
 }
-.mpopup {
+.mpopupChuck {
   display: none;
   position: fixed;
   z-index: 1;
@@ -34,12 +34,12 @@
   background-color: rgba(0, 0, 0, 0.4);
   cursor: url("../img/chuckNorrisIcon.png"), auto;
 }
-.modal-content {
+.modal-content-chuck {
   position: relative;
   background-color: black;
   margin: auto;
   padding: 0;
-  height: 30rem;
+  height: 45rem;
   width: 45rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -48,7 +48,7 @@
   animation-duration: 0.4s;
   border-radius: 0.3rem;
 }
-.modal-header {
+.modal-header-chuck {
   padding: 2px 12px;
   background-color: hotpink;
   color: #333;
@@ -56,15 +56,15 @@
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
 }
-.modal-header h2 {
+.modal-header-chuck h2 {
   font-size: 5rem;
   margin-top: 14px;
   margin-bottom: 14px;
 }
-.modal-body {
+.modal-body-chuck {
   padding: 0.2rem 1rem;
 }
-.modal-footer {
+.modal-footer-chuck {
   padding: 1rem;
   background-color: hotpink;
   color: #333;
@@ -74,7 +74,7 @@
   text-align: right;
 }
 
-.close {
+.closeChuck {
   color: black;
   width: 5rem;
   float: right;
@@ -82,8 +82,8 @@
   border: 0.3rem solid white;
   font-weight: bold;
 }
-.close:hover,
-.close:focus {
+.closeChuck:hover,
+.closeChuck:focus {
   color: white;
   background: hotpink;
   text-decoration: none;
