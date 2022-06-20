@@ -1,1 +1,174 @@
 
+@media screen and (max-width: 480px) {
+/* 
+  Chuck */
+  .chuckText {
+  font-size: 0.5rem;
+}
+.jokeBox {
+  color: hotpink;
+}
+.jokeBtn {
+  width: 100px !important;
+  height: 100px !important;
+  background-color: black;
+  color: hotpink;
+  padding: 1rem red;
+  border: 0.2rem solid white;
+}
+.jokeBtn:hover {
+  color: black;
+  background-color: hotpink;
+  cursor: url("../img/chuckNorrisIcon.png"), auto;
+}
+.chuckNorris {
+  cursor: url("../img/chuckNorrisIcon.png"), auto;
+}
+.mpopup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 20px !important;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: url("../img/chuckNorrisIcon.png"), auto;
+}
+.modal-content {
+  position: relative;
+  background-color: black;
+  margin: auto;
+  padding: 0;
+  height: 10rem !important;
+  width: 10rem !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  border-radius: 0.3rem;
+}
+.modal-header {
+  padding: 2px 12px;
+  background-color: hotpink;
+  color: #333;
+  border-bottom: 4px solid #e9ecef;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+.modal-header h2 {
+  font-size: 15px !important;
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}
+.modal-body {
+  padding: 0.2rem 1rem;
+}
+.modal-footer {
+  padding: 1rem;
+  background-color: hotpink;
+  color: #333;
+  border-top: 0.2rem solid #e9ecef;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  text-align: right;
+}
+
+.close {
+  color: black;
+  width: 20px !important;
+  float:right;
+  font-size: 15px !important;
+  border: 1px solid white !important;
+  font-weight: bold;
+  word-break: break-all;
+  margin-top: 7px;
+  
+}
+
+
+
+  /* Header  */
+
+.parent,
+modal-header {
+  
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hotpink;
+  font-size: 15px !important;
+  
+  
+}
+
+ img{
+  display:flexbox;
+  font-size: 15px;
+  height: auto;
+  width: 100%;
+  border-color: white;
+ }
+
+ header,.child{
+  font-size: 14px;
+  height: fit-content;
+  width: fit-content;
+  padding: 0;
+  margin:1.5px;
+  
+ }
+
+
+p{
+
+  display: flex;
+  padding: 0px;
+  margin-right: 0.5px;
+  font-size: 12.5px;
+  justify-content: center;
+  white-space: normal;
+  text-align: center;
+  word-break:break-all;
+}
+
+/* Month for Calander */
+
+.month-head-container {
+  border-radius: 25px;
+  border: 2px solid hotpink;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+
+}
+.year-and-month {
+  display: flex !important;
+  font-size: 15px !important;
+}
+
+.material-icons.md-48 {
+  font-weight: 10px !important;
+  font-size: 15px !important;
+}
+
+
+/* Calender */
+
+.day-block {
+    height: 3.5rem !important; 
+    font-size: 15px !important;
+}
+
+
+}
+
+
+
+
+

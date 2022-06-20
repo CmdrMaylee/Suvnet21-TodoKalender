@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../src/css/calendar.css">
     <link rel="stylesheet" href="../src/css/header.css">
     <link rel="stylesheet" href="../src/css/todos.css">
+    <link rel="stylesheet" href="../src//css/collapsbarMobile.css"
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../src/css/joke.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -24,6 +25,8 @@
 </head>
 
 <body>
+    <!-- This is the Header -->
+
     <header class="header parent align-items overflow">
         <div class="child">
             <!-- <p id="chuckText" class="child jokeBox"></p> -->
@@ -56,7 +59,19 @@
             <p id="datetimecounter"></p>
         </div>
     </header>
-    <div class="month-head-container">
+
+    <!-- This is the Header End -->
+
+
+
+
+  <div class="wrap-collabsible">
+  <input id="collapsible-1" class="toggle" type="checkbox">
+  <label for="collapsible-1" class="lbl-toggle" tabindex="0"><span>Show more…</span></label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+
+      <div class="month-head-container">
         <button class="material-icons md-48" id="previous-month-arrow">west</button>
         <p id="current-year-and-month" class="year-and-month"></p>
         <button class="material-icons md-48" id="next-month-arrow">east</button>
@@ -74,16 +89,16 @@
     </div>
     <div class="main-center">
         <div class="calendar-grid-container" id="calendar-view">
-            <!-- <div class="day-block">
-                <p>1</p>
-                <p class="todo-count">3</p>
-            </div>-->
-
-            <!-- <div class="day-block dim-day"></div>
-            <div class="day-block dim-day"></div>
-            <div class="day-block dim-day"></div> -->
         </div>
     </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
     <section class="create-todo">
         <form id="new-todo-form">
             <input type="date" name="date" id="date">
