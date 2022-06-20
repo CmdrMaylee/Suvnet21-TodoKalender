@@ -7,6 +7,8 @@
 }
 .jokeBox {
   color: hotpink;
+  width: auto !important;
+  height: auto !important;
 }
 .jokeBtn {
   width: 100px !important;
@@ -26,31 +28,16 @@
 }
 .mpopup {
   display: none;
-  position: fixed;
+  position: relative;
   z-index: 1;
-  padding-top: 20px !important;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-  cursor: url("../img/chuckNorrisIcon.png"), auto;
+  padding-top: 50% auto !important;
+  
 }
 .modal-content {
-  position: relative;
-  background-color: black;
-  margin: auto;
-  padding: 0;
-  height: 10rem !important;
-  width: 10rem !important;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s;
-  border-radius: 0.3rem;
+  background: none;
+  position: relative !important;
+  height: 15rem !important;
+  width: 15rem !important;
 }
 .modal-header {
   padding: 2px 12px;
@@ -66,16 +53,16 @@
   margin-bottom: 15px !important;
 }
 .modal-body {
-  padding: 0.2rem 1rem;
+  padding: 0 0 !important;
+  margin: auto !important;
 }
 .modal-footer {
-  padding: 1rem;
+  padding: 0rem !important;
   background-color: hotpink;
-  color: #333;
   border-top: 0.2rem solid #e9ecef;
   border-bottom-left-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
-  text-align: right;
+  text-align:right;
 }
 
 .close {
@@ -125,16 +112,15 @@ modal-header {
  }
 
 
-p{
-
-  display: flex;
-  padding: 0px;
-  margin-right: 0.5px;
-  font-size: 12.5px;
-  justify-content: center;
-  white-space: normal;
-  text-align: center;
-  word-break:break-all;
+p {
+    display: flex;
+    padding: 1.5px;
+    margin-right: 1px;
+    font-size: 12px;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Month for Calander */
@@ -163,6 +149,19 @@ p{
 .day-block {
     height: 3.5rem !important; 
     font-size: 15px !important;
+}
+
+.todo-count {
+    position:fixed;
+    color: hotpink;
+    font-size: 15px !important;
+    width: 1rem !important;
+    height: 1rem !important;
+    background: #32557f;
+    margin-right: 0.5rem !important;
+    border-radius: 0.5rem !important;
+    text-align: bottom !important;
+    background-color: black;
 }
 
 
