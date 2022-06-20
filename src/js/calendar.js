@@ -1,25 +1,5 @@
 /* DEFAULTS */
 
-document.addEventListener("DOMContentLoaded", main);
-
-function main() {
-  const activeDate = new Date();
-  addEventListeners(activeDate);
-  renderCalendarView(activeDate);
-}
-
-function addEventListeners(date) {
-  const previousArrow = document.getElementById("previous-month-arrow");
-  const nextArrow = document.getElementById("next-month-arrow");
-
-  previousArrow.addEventListener("click", function () {
-    decrementMonth(date);
-  });
-  nextArrow.addEventListener("click", function () {
-    incrementMonth(date);
-  });
-}
-
 function decrementMonth(date) {
   date.setMonth(date.getMonth() - 1);
   renderCalendarView(date);
@@ -32,10 +12,11 @@ function incrementMonth(date) {
 
 /* RENDER ELEMENTS */
 
-function renderCalendarView(date) {
-  renderMonthHeader(date);
-  emptyCalendar();
-  fillCalendar(date);
+
+function renderCalendarView() {
+    renderMonthHeader(activeDate)
+    emptyCalendar()
+    fillCalendar(activeDate)
 }
 
 function renderMonthHeader(date) {
