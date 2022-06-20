@@ -46,10 +46,38 @@ let acceptData = () => {
   createTasks();
 };
 
-let createTasks = () => {
+/**
+ * 
+ * @param {Date} date 
+ * @param {Date} x.date
+ */
+let createTasks = (date) => {
   tasks.innerHTML = "";
   data.map((x, y) => {
-    return (tasks.innerHTML += `
+    if (date) {
+      /* const filterDate = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
+      const checkThisDate = x.date */
+      let filterDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+      filterDate = filterDate.getFullYear() + '-' + ('0' + (filterDate.getMonth() + 1)).slice(-2) + '-' + ('0' + filterDate.getDate()).slice(-2);
+      const checkThisDate = x.date
+      if (filterDate == checkThisDate) {
+        console.log("Matched!")
+        return (tasks.innerHTML += `
+      <div id=${y} class="todo-task">
+          <span class="fw-bold">${x.text}</span>
+          <span class="purple">${x.date}</span>
+          <p>${x.description}</p>
+  
+          <span class="options">
+            <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit hover"></i>
+            <i onClick ="deleteTask(this);createTasks()" class="fas fa-trash-alt hover"></i>
+          </span>
+        </div>
+    `);
+      }
+    } else if (!date) {
+      console.log("No date, printing default")
+      return (tasks.innerHTML += `
     <div id=${y} class="todo-task">
           <span class="fw-bold">${x.text}</span>
           <span class="purple">${x.date}</span>
@@ -61,6 +89,7 @@ let createTasks = () => {
           </span>
         </div>
     `);
+    }
   });
 
   resetForm();
@@ -105,8 +134,9 @@ function emptyTodoView() {
 }
 
 function printTodos(date) {
-
   if (date) {
-
+    createTasks(date);
+  } else {
+    createTasks();
   }
 }
