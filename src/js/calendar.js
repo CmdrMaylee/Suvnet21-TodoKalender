@@ -38,8 +38,21 @@ function renderNumberedDay(date, num) {
 
     const thisDaysTodoArray = countTodosForDayBlock(date, num);
     // console.log(date.getMonth() + ' on the ' + num + ' has ' + thisDaysTodoCount.length + ' many todos')
+    let selectedDate = date;
+    selectedDate.setDay(num);
     if (thisDaysTodoArray.length !== 0) {
         let todoCounterOnDay = document.createElement("div");
+        todoCounterOnDay.addEventListener("click", () => {
+            if (selectedDateForTodos) {
+                emptyTodoView();
+                printTodos();
+                selectedDateForTodos = "";
+            } else {
+                emptyTodoView();
+                printTodos();
+                selectedDateForTodos = selectedDate;
+            }
+        })
         todoCounterOnDay.className = "todo-count";
         todoCounterOnDay.innerHTML = thisDaysTodoArray.length;
         dayBlock.appendChild(todoCounterOnDay);

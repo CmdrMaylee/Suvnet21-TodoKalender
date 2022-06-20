@@ -94,3 +94,19 @@ let resetForm = () => {
   console.log(data);
   createTasks();
 })();
+
+
+
+function emptyTodoView() {
+  const todoList = document.getElementById("tasks");
+  while (todoList.lastChild) {
+    todoList.removeChild(todoList.lastChild);
+  }
+}
+
+function printTodos(date) {
+
+  if (date) {
+
+  }
+}
