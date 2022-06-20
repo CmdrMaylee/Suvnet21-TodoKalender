@@ -16,13 +16,13 @@ jokeBtn.addEventListener("click", () => {
 });
 
 // Select modal
-var mpopup = document.getElementById("mpopupBox");
+var mpopup = document.getElementById("mpopupboxChuck");
 
 // Select trigger link
-var mpLink = document.getElementById("mpopupLink");
+var mpLink = document.getElementById("mpopupLinkChuck");
 
 // Select close action element
-var close = document.getElementsByClassName("close")[0];
+var close = document.getElementsByClassName("closeChuck")[0];
 
 // Open modal once the link is clicked
 mpLink.onclick = function () {

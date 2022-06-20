@@ -1,98 +1,96 @@
-window.addEventListener("load", () => {
-  todos = JSON.parse(localStorage.getItem("todos")) || [];
-  const newTodoForm = document.querySelector("#new-todo-form");
+let form = document.getElementById("form");
+let textInput = document.getElementById("textInput");
+let dateInput = document.getElementById("dateInput");
+let textarea = document.getElementById("textarea");
+let msg = document.getElementById("msg");
+let tasks = document.getElementById("tasks");
+let add = document.getElementById("add");
 
-  newTodoForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const todo = {
-      content: e.target.elements.content.value,
-      date: e.target.elements.date.value,
-    };
-
-    if (!todo.date || !todo.content.trim()) {
-      console.log(todo.date);
-      console.log(todo.content.trim());
-      alert("please provide both date input and todo input");
-    } else {
-      console.log("success");
-      console.log(todo);
-      todos.push(todo);
-    }
-
-    localStorage.setItem("todos", JSON.stringify(todos));
-
-    // Reset the form
-    e.target.reset();
-    headerCountNumOfTotalTodos()
-    // renderCalendarView() // TODO CREATE MAIN.JS
-
-    DisplayTodos();
-  });
-
-  DisplayTodos();
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  formValidation();
 });
 
-function DisplayTodos() {
-  const todoList = document.querySelector(".todo-list");
-  todoList.innerHTML = "";
+let formValidation = () => {
+  if (textInput.value === "") {
+    console.log("failure");
+    msg.innerHTML = "Task cannot be blank";
+  } else if (dateInput.value === "") {
+    console.log("failure");
+    msg.innerHTML = "Date cannot be blank";
+  } else {
+    console.log("success");
+    msg.innerHTML = "";
+    acceptData();
+    add.setAttribute("data-bs-dismiss", "modal");
+    add.click();
 
-  todos.forEach((todo) => {
-    const todoItem = document.createElement("div");
-    todoItem.classList.add("todo-item");
-    const label = document.createElement("label");
-    const input = document.createElement("input");
-    // const dateInput = document.createElement("dateInput");
-    const content = document.createElement("div");
-    const date = document.createElement("div");
-    const actions = document.createElement("div");
-    // const edit = document.createElement("button");
-    const deleteButton = document.createElement("button");
+    (() => {
+      add.setAttribute("data-bs-dismiss", "");
+    })();
+  }
+};
 
-    content.classList.add("todo-content");
+let data = [{}];
 
-    date.classList.add("todo-date");
-
-    actions.classList.add("actions");
-    // edit.classList.add("edit");
-    deleteButton.classList.add("delete");
-
-    content.innerHTML = `<div class="div-todo"> ${todo.content}<br>${todo.date}<br><div></div></div>`;
-    // `<div class="div-todo"> ${todo.date}</div>`;
-    // date.innerHTML = `<input type="text" value="${todo.date}" >`;
-    // edit.innerHTML = "Edit";
-    deleteButton.innerHTML = "Delete";
-
-    label.appendChild(input);
-    // label.appendChild(dateInput);
-    label.appendChild(date);
-    // actions.appendChild(edit);
-    actions.appendChild(deleteButton);
-    // todoItem.appendChild(label);
-    // todoItem.appendChild(input);
-    todoItem.appendChild(date);
-    todoItem.appendChild(content);
-    todoItem.appendChild(actions);
-    todoList.appendChild(todoItem);
-
-    // edit.addEventListener("click", (e) => {
-    //   const input = content.querySelector("input");
-    //   input.removeAttribute("readonly");
-    //   input.focus();
-    //   input.addEventListener("blur", (e) => {
-    //     input.setAttribute("readonly", true);
-    //     todo.content = e.target.value;
-    //     localStorage.setItem("todos", JSON.stringify(todos));
-    //     DisplayTodos();
-    //   });
-    // });
-
-    deleteButton.addEventListener("click", (e) => {
-      todos = todos.filter((t) => t != todo);
-      localStorage.setItem("todos", JSON.stringify(todos));
-      headerCountNumOfTotalTodos()
-      // renderCalendarView() // TODO CREATE MAIN.JS
-      DisplayTodos();
-    });
+let acceptData = () => {
+  data.push({
+    text: textInput.value,
+    date: dateInput.value,
+    description: textarea.value,
   });
-}
+
+  localStorage.setItem("data", JSON.stringify(data));
+
+  console.log(data);
+  createTasks();
+};
+
+let createTasks = () => {
+  tasks.innerHTML = "";
+  data.map((x, y) => {
+    return (tasks.innerHTML += `
+    <div id=${y} class="todo-task">
+          <span class="fw-bold">${x.text}</span>
+          <span class="purple">${x.date}</span>
+          <p>${x.description}</p>
+  
+          <span class="options">
+            <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit hover"></i>
+            <i onClick ="deleteTask(this);createTasks()" class="fas fa-trash-alt hover"></i>
+          </span>
+        </div>
+    `);
+  });
+
+  resetForm();
+};
+
+let deleteTask = (e) => {
+  e.parentElement.parentElement.remove();
+  data.splice(e.parentElement.parentElement.id, 1);
+  localStorage.setItem("data", JSON.stringify(data));
+  console.log(data);
+};
+
+let editTask = (e) => {
+  let selectedTask = e.parentElement.parentElement;
+
+  textInput.value = selectedTask.children[0].innerHTML;
+  dateInput.value = selectedTask.children[1].innerHTML;
+  textarea.value = selectedTask.children[2].innerHTML;
+
+  deleteTask(e);
+};
+
+let resetForm = () => {
+  textInput.value = "";
+  dateInput.value = "";
+  textarea.value = "";
+};
+
+(() => {
+  data = JSON.parse(localStorage.getItem("data")) || [];
+  console.log(data);
+  createTasks();
+})();
