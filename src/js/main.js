@@ -1,25 +1,21 @@
 document.addEventListener('DOMContentLoaded', main)
+const activeDate = new Date()
+todos = JSON.parse(localStorage.getItem("todos")) || [];
 
 function main() {
-    const activeDate = new Date()
 
     // Todos
-    todos = JSON.parse(localStorage.getItem("todos")) || [];
-    DisplayTodos();
+    DisplayTodos(todos);
 
     // Calendar
     addEventListeners(activeDate)
-    renderCalendarView(activeDate)
+    renderCalendarView()
 
     // Header
     headerCountNumOfTotalTodos()
-
-
-
-    addEventListeners()
 }
 
-function addEventListeners() {
+function addEventListeners(date) {
     const newTodoForm = document.querySelector("#new-todo-form");
     newTodoForm.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -46,7 +42,7 @@ function addEventListeners() {
         headerCountNumOfTotalTodos()
         renderCalendarView(date)
 
-        DisplayTodos();
+        DisplayTodos(todos);
     });
 
     const previousArrow = document.getElementById("previous-month-arrow")
@@ -54,16 +50,4 @@ function addEventListeners() {
 
     const nextArrow = document.getElementById("next-month-arrow")
     nextArrow.addEventListener('click', function () { incrementMonth(date) })
-
-    const allDeleteButtons = document.getElementsByClassName('delete')
-    console.log(allDeleteButtons)
-    for (const button of allDeleteButtons) {
-        button.addEventListener("click", (date) => {
-            todos = todos.filter((t) => t != todo);
-            localStorage.setItem("todos", JSON.stringify(todos));
-            headerCountNumOfTotalTodos()
-            renderCalendarView(date)
-            DisplayTodos();
-        });
-    }
 }

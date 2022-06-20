@@ -1,41 +1,7 @@
-/* window.addEventListener("load", () => {
-  todos = JSON.parse(localStorage.getItem("todos")) || [];
-  const newTodoForm = document.querySelector("#new-todo-form");
-
-  newTodoForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const todo = {
-      content: e.target.elements.content.value,
-      date: e.target.elements.date.value,
-    };
-
-    if (!todo.date || !todo.content.trim()) {
-      console.log(todo.date);
-      console.log(todo.content.trim());
-      alert("please provide both date input and todo input");
-    } else {
-      console.log("success");
-      console.log(todo);
-      todos.push(todo);
-    }
-
-    localStorage.setItem("todos", JSON.stringify(todos));
-
-    // Reset the form
-    e.target.reset();
-    headerCountNumOfTotalTodos()
-    // renderCalendarView() // TODO CREATE MAIN.JS
-
-    DisplayTodos();
-  });
-
-  DisplayTodos();
-}); */
-
 function DisplayTodos() {
   const todoList = document.querySelector(".todo-list");
   todoList.innerHTML = "";
+
 
   todos.forEach((todo) => {
     const todoItem = document.createElement("div");
@@ -87,12 +53,12 @@ function DisplayTodos() {
     //   });
     // });
 
-    /* deleteButton.addEventListener("click", (date) => {
+    deleteButton.addEventListener("click", () => {
       todos = todos.filter((t) => t != todo);
       localStorage.setItem("todos", JSON.stringify(todos));
       headerCountNumOfTotalTodos()
-      renderCalendarView(date)
+      renderCalendarView()
       DisplayTodos();
-    }); */
+    });
   });
 }
