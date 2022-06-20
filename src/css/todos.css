@@ -85,3 +85,42 @@
   color: purple;
   font-weight: 900;
 }
+.add-button {
+  background-color: hotpink;
+  font-size: 2.5rem;
+  font-weight: 900;
+  height: 5rem;
+  width: 8rem;
+  color: black;
+  border-color: hotpink;
+}
+.add-button:hover {
+  background-color: black;
+  color: hotpink;
+  border: 0.2rem solid hotpink;
+}
+.title {
+  background-color: black;
+  color: hotpink;
+  font-size: 2rem;
+}
+.modal-body {
+  background-color: black;
+}
+.form-control {
+  background-color: hotpink;
+  color: black;
+}
+.form-control:focus {
+  background-color: black;
+  font-size: 2rem;
+
+  color: hotpink;
+}
+.modal-footer {
+  background-color: black;
+}
+.modal-header {
+  color: black;
+  background-color: hotpink;
+}
