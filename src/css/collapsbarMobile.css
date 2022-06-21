@@ -17,7 +17,7 @@ input[type='checkbox'] {
 
   cursor: pointer;
 
-  border-radius: 7px;
+  border-radius: 1px 1px 1px 1px;
   transition: all 0.25s ease-out;
 }
 
