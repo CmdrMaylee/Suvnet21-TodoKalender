@@ -3,10 +3,9 @@
 /* 
   Chuck */
   .chuckText {
-  font-size: 0.5rem;
+  word-wrap: break-word !important;
 }
 .jokeBox {
-  color: hotpink;
   width: auto !important;
   height: auto !important;
 }
@@ -15,153 +14,190 @@
   height: 100px !important;
   background-color: black;
   color: hotpink;
-  padding: 1rem red;
+  margin-bottom: 0.5rem;
   border: 0.2rem solid white;
 }
-.jokeBtn:hover {
-  color: black;
-  background-color: hotpink;
-  cursor: url("../img/chuckNorrisIcon.png"), auto;
-}
-.chuckNorris {
-  cursor: url("../img/chuckNorrisIcon.png"), auto;
-}
-.mpopup {
-  display: none;
-  position: relative;
-  z-index: 1;
-  padding-top: 50% auto !important;
-  
-}
-.modal-content {
-  background: none;
+
+.modal-content-chuck {
   position: relative !important;
-  height: 15rem !important;
+  height: 25rem !important;
   width: 15rem !important;
 }
-.modal-header {
-  padding: 2px 12px;
-  background-color: hotpink;
-  color: #333;
-  border-bottom: 4px solid #e9ecef;
-  border-top-left-radius: 0.3rem;
-  border-top-right-radius: 0.3rem;
-}
-.modal-header h2 {
+
+.modal-header-chuck h2 {
   font-size: 15px !important;
   margin-top: 15px !important;
   margin-bottom: 15px !important;
 }
-.modal-body {
-  padding: 0 0 !important;
+
+.modal-body-chuck {
   margin: auto !important;
 }
-.modal-footer {
+.modal-footer-chuck {
   padding: 0rem !important;
-  background-color: hotpink;
-  border-top: 0.2rem solid #e9ecef;
-  border-bottom-left-radius: 0.3rem;
-  border-bottom-right-radius: 0.3rem;
-  text-align:right;
 }
 
-.close {
-  color: black;
+.closeChuck {
+  display: fixed !important;
   width: 20px !important;
-  float:right;
-  font-size: 15px !important;
-  border: 1px solid white !important;
-  font-weight: bold;
-  word-break: break-all;
-  margin-top: 7px;
+  font-size: 20px !important;
+  border: none !important;
+  margin-top: auto !important;
   
 }
+
+img{
+  display:flex;
+  height: auto;
+  width: 100%;
+ }
 
 
 
   /* Header  */
 
-.parent,
-modal-header {
-  
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  background-color: hotpink;
-  font-size: 15px !important;
-  
-  
+  /* chuck */
+.child:nth-child(1){
+  border-radius: 1.5rem;
+  width: auto;
+  height: auto;  
+}
+/* welcome text */
+.child:nth-child(2){
+  display: none !important;
 }
 
- img{
-  display:flexbox;
-  font-size: 15px;
-  height: auto;
-  width: 100%;
-  border-color: white;
- }
+/* Current date and */
+.child:nth-child(4){
+  border: none;
+  position:absolute;
+  top: 0px;
+  right: 0px;  
+}
 
- header,.child{
-  font-size: 14px;
-  height: fit-content;
-  width: fit-content;
-  padding: 0;
-  margin:1.5px;
+
+
+header{
   
+  width: 100%;
+  height: auto !important;
+  font-family: monospace;
+  text-align: center;
+  padding: 0.5rem !important;
+  background: hotpink;
+  border: none !important;
+  padding-bottom: 2px !important;
+}
+
+.parent{
+border-radius: none !important;
+
+}
+.modal-header {
+  
+  height: 52px !important; 
+  font-size: 15px !important;
+}
+
+ 
+
+
+ .child{
+  display:grid !important;
+  font-size: 14px;
+  padding: 0;
+  margin:2px;
  }
 
 
 p {
-    display: flex;
-    padding: 1.5px;
-    margin-right: 1px;
-    font-size: 12px;
-    justify-content: center;
-    white-space: normal;
-    text-align: center;
-    word-break: break-all;
+
+    margin: auto !important;
+    padding-bottom: 6px !important;
+    padding-top: 6px !important;
+    display: block !important;
+    font-size: 6.5px;
+    overflow: hidden;
+    
 }
 
 /* Month for Calander */
 
 .month-head-container {
-  border-radius: 25px;
+  
+  border-radius: 10px;
   border: 2px solid hotpink;
-  padding: 20px;
-  width: 200px;
-  height: 150px;
-
+  padding: 10px;
 }
 .year-and-month {
   display: flex !important;
   font-size: 15px !important;
+  padding: 0px !important;
+   
 }
 
 .material-icons.md-48 {
-  font-weight: 10px !important;
+  font-weight: 15px !important;
   font-size: 15px !important;
+  width: auto;
+  height: auto;
+  max-width: 30px;
+  
 }
 
 
 /* Calender */
 
 .day-block {
-    height: 3.5rem !important; 
-    font-size: 15px !important;
+    height: 3rem !important; 
+    font-size: 11px !important;
+    display: block !important;
 }
 
 .todo-count {
-    position:fixed;
-    color: hotpink;
-    font-size: 15px !important;
-    width: 1rem !important;
-    height: 1rem !important;
-    background: #32557f;
-    margin-right: 0.5rem !important;
-    border-radius: 0.5rem !important;
-    text-align: bottom !important;
-    background-color: black;
+    color: rgb(0, 0, 0) !important;
+    font-size: 10px !important;
+    width: 15px !important;
+    height:  auto !important;
+    margin-right: 0.1rem !important;
+    border-radius: 0px !important;
+    background-color: rgb(239, 82, 189) !important;
+    padding-right: 0px !important;
+    padding-top: 0.5px;
+    position:relative !important; 
+    
+}
+
+/* Todoo bottom */
+
+.addTodo {
+
+  width: auto !important;
+  height: auto !important;
+  font-size: 15px !important;
+  margin-top: 1rem;
+  border: 0.4rem solid black;
+  overflow-y: scroll;
+}
+
+.add-todo-title {
+  font-size: 15px !important;
+  height: 2rem !important;
+  width: 19rem !important;
+}
+
+.add-button {
+  display: flex !important;
+  font-size: 16px !important;
+  height: 38px !important;
+  width: 38px !important;
+  align-items: center;
+  padding-right: 40px !important;
+}
+.add-button:hover {
+  background-color: black;
+  color: hotpink;
+  border: 0.2rem solid hotpink;
 }
 
 
