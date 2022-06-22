@@ -1,3 +1,50 @@
+@media screen and (max-width: 1481px) {
+  .calendar-day-row {
+    font-size: 1rem;
+  }
+
+  .header {
+    font-size: 1rem;
+  }
+
+  .add-todo-title {
+    height: 5rem;
+    width: 37.5rem;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 781px) {
+  .calendar-day-row {
+    font-size: 0.6rem;
+  }
+
+  .header {
+    font-size: 0.6rem;
+  }
+
+  .chuckNorris {
+    width: 70%;
+  }
+
+  .day-block {
+    font-size: 1.25rem;
+  }
+
+  .todo-count {
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.75rem;
+    border-radius: 0.5rem;
+  }
+
+  .add-todo-title {
+    height: 1.875rem;
+    width: 12.5rem;
+    font-size: 1rem;
+  }
+}
 
 @media screen and (max-width: 480px) {
 /* 
@@ -110,7 +157,7 @@ border-radius: none !important;
  }
 
 
-p {
+.calendar-day-row {
 
     margin: auto !important;
     padding-bottom: 6px !important;

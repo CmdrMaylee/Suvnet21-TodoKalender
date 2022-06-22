@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../src/css/globalStyle.css">
-    <link rel="stylesheet" href="../src/css/_desktopQuery.css">
-    <link rel="stylesheet" href="../src/css/mobileQuery.css">
     <link rel="stylesheet" href="../src/css/calendar.css">
     <link rel="stylesheet" href="../src/css/header.css">
     <link rel="stylesheet" href="../src//css/collapsbarMobile.css">
@@ -20,6 +18,7 @@
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../src/css/todos.css">
+    <link rel="stylesheet" href="../src/css/mobileQuery.css">
 
     <script defer src="../src/js/calendar.js"></script>
     <script defer src="../src/js/header.js"></script>
@@ -65,7 +64,7 @@
         <div class="child overflow">Hello and welcome to this hot, pink Calender</div>
 
         <div class="child overflow" id="todo-counter"></div>
-        <div class="child overflow">The day is
+        <div class="child overflow">Today is
             <p id="datetimecounter"></p>
         </div>
     </header>
@@ -89,13 +88,13 @@
 
                 <div class="main-center">
                     <div class="calendar-grid-container center-text" id="day-header">
-                        <p>Monday</p>
-                        <p>Tuesday</p>
-                        <p>Wednesday</p>
-                        <p>Thursday</p>
-                        <p>Friday</p>
-                        <p>Saturday</p>
-                        <p>Sunday</p>
+                        <div class="calendar-day-row">Monday</div>
+                        <div class="calendar-day-row">Tuesday</div>
+                        <div class="calendar-day-row">Wednesday</div>
+                        <div class="calendar-day-row">Thursday</div>
+                        <div class="calendar-day-row">Friday</div>
+                        <div class="calendar-day-row">Saturday</div>
+                        <div class="calendar-day-row">Sunday</div>
                     </div>
                 </div>
 
@@ -111,7 +110,7 @@
 
 
         <div id="todoList">
-            <button class="add-todo-title" data-bs-toggle="modal" data-bs-target="#form">Add New</span><br>
+            <button class="add-todo-title" data-bs-toggle="modal" data-bs-target="#form">Add Todo</span><br>
         </div>
 
         <!-- Modal -->
@@ -134,7 +133,7 @@
                             rows="5"></textarea>
                     </div>
                     <div class="modal-footer">
-                        <button type="close" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <!-- <button type="close" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
                         <button type="submit" id="add" class="btn btn-primary add-button">Add</button>
                     </div>
                 </div>
