@@ -15,7 +15,7 @@ Uppgiften har varit stor och lärorik och vi har fått arbeta på ordentligt fö
 
 Vi har valt att anropa ett API som genererar slumpmässiga skämt från kategorin "dev" i ett api med Chuck Norris skämt när man trycker på en knapp.
 
-Vi har valt att ha vår todo-lista under kalendern för att det passar vår design och att vi tyckte det var mycket snyggare.
+Vi har valt att ha vår todo-lista under kalendern för att det passar vår design bättre och att vi tyckte det var mycket snyggare.
 
 TODO: Utveckla vidare innan inlämning för att beskriva arbetets gång och hur det har gått!
 
