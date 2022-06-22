@@ -69,7 +69,6 @@ let createTasks = (date) => {
         return (tasks.innerHTML += `
       <div id=${y} class="todo-task">
           <span class="fw-bold">${x.text}</span>
-          <br>
           <span class="purple">${x.date}</span>
           <p>${x.description}</p>
   
@@ -85,7 +84,6 @@ let createTasks = (date) => {
       return (tasks.innerHTML += `
     <div id=${y} class="todo-task">
           <span class="fw-bold">${x.text}</span>
-          <br>
           <span class="purple">${x.date}</span>
           <p>${x.description}</p>
   

@@ -25,6 +25,7 @@
   border: 0.3rem solid black;
   border-radius: 0.7rem;
   padding: 0.3rem;
+  display: grid;
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -59,7 +60,7 @@
 .todo-task {
   max-width: 15rem;
   max-height: 15;
-  word-wrap: break-word;
+  word-break: break-all;
   user-select: none;
 }
 .purple {
