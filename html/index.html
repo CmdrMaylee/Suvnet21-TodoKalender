@@ -38,9 +38,6 @@
 
     <header class="header parent align-items overflow">
         <div class="child">
-            <!-- <p id="chuckText" class="child jokeBox"></p> -->
-            <!-- Link to trigger modal -->
-            <!-- <a href="javascript:void(0);" class="btn btn-primary" id="mpopupLink">Launch Modal Popup</a> -->
             <img src="../src/img/chuckNorris.png" class="chuckNorris" id="mpopupLinkChuck" alt="">
             <!-- Modal popup box -->
             <div id="mpopupboxChuck" class="mpopupChuck">
@@ -65,7 +62,7 @@
 
         <div class="child overflow" id="todo-counter"></div>
         <div class="child overflow">Today is
-            <p id="datetimecounter"></p>
+            <div id="datetimecounter"></div>
         </div>
     </header>
 
@@ -82,7 +79,7 @@
 
                 <div class="month-head-container">
                     <button class="material-icons md-48" id="previous-month-arrow">west</button>
-                    <p id="current-year-and-month" class="year-and-month"></p>
+                    <div id="current-year-and-month" class="year-and-month"></div>
                     <button class="material-icons md-48" id="next-month-arrow">east</button>
                 </div>
 
@@ -134,6 +131,7 @@
                     </div>
                     <div class="modal-footer">
                         <!-- <button type="close" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                        <!-- OPTIONAL CLOSE BUTTON ON CREATE TODO MENU -->
                         <button type="submit" id="add" class="btn btn-primary add-button">Add</button>
                     </div>
                 </div>

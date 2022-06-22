@@ -46,11 +46,6 @@ let acceptData = () => {
   createTasks();
 };
 
-/**
- * 
- * @param {Date} date 
- * @param {Date} x.date
- */
 let createTasks = (date) => {
   tasks.innerHTML = "";
   data.map((x, y) => {
@@ -93,7 +88,6 @@ let createTasks = (date) => {
   });
   headerCountNumOfTotalTodos()
   renderCalendarView()
-
   resetForm();
 };
 
