@@ -34,6 +34,11 @@
   width: 10rem;
 }
 
+.material-icons.md-48:active{
+  transform: scale(1.3);
+  transition: .1s;
+}
+
 .material-icons.md-48:hover {
   background-color: black;
   color: hotpink;
