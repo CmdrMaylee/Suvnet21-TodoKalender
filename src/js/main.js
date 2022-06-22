@@ -5,7 +5,7 @@ todos = JSON.parse(localStorage.getItem("data")) || [];
 
 function main() {
   // Startup
-  // createLocalStorageIfMissing();
+  createLocalStorageIfMissing();
 
   // Todos
 
