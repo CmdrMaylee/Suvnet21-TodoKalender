@@ -31,11 +31,6 @@ function renderEmptyDayBlock() {
     calendarView.appendChild(emptyBlock);
 }
 
-/**
- * 
- * @param {Date} date 
- * @param {*} num 
- */
 function renderNumberedDay(date, num) {
     let dayBlock = document.createElement("div");
     dayBlock.className = "day-block";
