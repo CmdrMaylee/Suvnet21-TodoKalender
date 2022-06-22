@@ -12,6 +12,10 @@
   padding: 1rem red;
   border: 0.2rem solid white;
 }
+.jokeBtn:active{
+  transform: scale(1.1);
+  transition: .1s;
+}
 .jokeBtn:hover {
   color: black;
   background-color: hotpink;

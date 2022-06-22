@@ -56,7 +56,7 @@ let createTasks = (date) => {
       filterDate = filterDate.getFullYear() + '-' + ('0' + (filterDate.getMonth() + 1)).slice(-2) + '-' + ('0' + filterDate.getDate()).slice(-2);
       const checkThisDate = x.date
       if (filterDate == checkThisDate) {
-        console.log("Matched!")
+        // console.log("Matched!")
         return (tasks.innerHTML += `
       <div id=${y} class="todo-task">
           <span class="fw-bold">${x.text}</span>

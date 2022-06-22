@@ -38,24 +38,29 @@ function renderNumberedDay(date, num) {
 
     const thisDaysTodoArray = countTodosForDayBlock(date, num);
     // console.log(date.getMonth() + ' on the ' + num + ' has ' + thisDaysTodoCount.length + ' many todos')
-    let selectedDate = new Date(date);
-    selectedDate.setDate(num)
+
     if (thisDaysTodoArray.length !== 0) {
+        let selectedDate = new Date(date);
+        selectedDate.setDate(num)
+        selectedDate = formatDate(selectedDate)
         let todoCounterOnDay = document.createElement("div");
         todoCounterOnDay.addEventListener("click", () => {
             emptyTodoView();
-            if (!selectedDateForTodos || selectedDateForTodos !== selectedDate) {
+            if (selectedDateForTodos === "" || selectedDateForTodos !== selectedDate) {
                 selectedDateForTodos = selectedDate;
-                printTodos(selectedDate);
+                let dateConvert = new Date(selectedDate)
+                printTodos(dateConvert);
             } else {
                 selectedDateForTodos = "";
                 printTodos();
             }
+            console.log('Selected date: ' + selectedDate)
         })
         todoCounterOnDay.className = "todo-count";
         todoCounterOnDay.innerHTML = thisDaysTodoArray.length;
         dayBlock.appendChild(todoCounterOnDay);
     }
+
     const calendarView = document.getElementById("calendar-view");
     calendarView.appendChild(dayBlock);
 }
@@ -115,6 +120,16 @@ function getFirstDayOfMonthReturnDate(date) {
 
 function getLastDayOfMonthReturnDate(date) {
     return new Date(date.getFullYear(), date.getMonth() + 1, 0);
+}
+
+/**
+ * 
+ * @param {Date} date 
+ */
+function formatDate(date) {
+    let filterDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    filterDate = filterDate.getFullYear() + '-' + ('0' + (filterDate.getMonth() + 1)).slice(-2) + '-' + ('0' + filterDate.getDate()).slice(-2);
+    return filterDate
 }
 
 function convertMonth(monthNum) {
