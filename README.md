@@ -13,5 +13,9 @@ Sättet vi har arbetat på har inneburit mycket individuellt arbete men många g
 
 Uppgiften har varit stor och lärorik och vi har fått arbeta på ordentligt för att få ordning på allting men vi är väldigt nöjda med slutprodukten och vad vi har producerat. Vid sidan av att vi alla lärt oss mycket html, css och javascript har vi lärt oss att på ett intiutivt sätt arbeta genom github och på så vis blivit bekväma med verktyget på ett helt annat sätt än förut. 
 
+Vi har valt att anropa ett API som genererar slumpmässiga skämt från kategorin "dev" i ett api med Chuck Norris skämt när man trycker på en knapp.
+
+Vi har valt att ha vår todo-lista under kalendern för att det passar vår design och att vi tyckte det var mycket snyggare.
 
 TODO: Utveckla vidare innan inlämning för att beskriva arbetets gång och hur det har gått!
+
