@@ -77,6 +77,11 @@
   border: 0.2rem solid white;
 }
 
+.jokeBtn:active{
+  transform: scale(1.1);
+  transition: .1s;
+}
+
 .modal-content-chuck {
   position: relative !important;
   height: 25rem !important;
@@ -111,6 +116,11 @@ img{
   width: 100%;
  }
 
+ img:active{
+  transform: scale(1.1);
+  transition: .1s;
+}
+
 
 
   /* Header  */
@@ -130,10 +140,13 @@ img{
 .child:nth-child(4){
   border: none;
   position:absolute;
-  top: 0px;
-  right: 0px;  
+  top: 0%;
+  right: 0%; 
 }
 
+p#datetimecounter{
+  font-size:15px;
+}
 
 
 header{
@@ -175,7 +188,7 @@ border-radius: none !important;
     padding-bottom: 6px !important;
     padding-top: 6px !important;
     display: block !important;
-    font-size: 6.5px;
+    font-size: 7px;
     overflow: hidden;
     
 }
@@ -194,6 +207,9 @@ border-radius: none !important;
   padding: 0px !important;
    
 }
+.content-inner{
+  padding: 0;
+}
 
 .material-icons.md-48 {
   font-weight: 15px !important;
@@ -202,6 +218,11 @@ border-radius: none !important;
   height: auto;
   max-width: 30px;
   
+}
+
+.material-icons.md-48:active{
+  transform: scale(1.3);
+  transition: .1s;
 }
 
 
@@ -245,6 +266,12 @@ border-radius: none !important;
   width: 19rem !important;
 }
 
+.add-todo-title:active{
+  transform: scale(1.1);
+  transition: .1s;
+}
+
+
 .add-button {
   display: flex !important;
   font-size: 16px !important;
@@ -252,6 +279,10 @@ border-radius: none !important;
   width: 38px !important;
   align-items: center;
   padding-right: 40px !important;
+}
+.add-button:active{
+  transform: scale(1.1);
+  transition: .1s;
 }
 .add-button:hover {
   background-color: black;
