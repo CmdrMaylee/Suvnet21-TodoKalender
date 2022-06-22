@@ -13,25 +13,6 @@
   border: 0.4rem solid black;
   overflow-y: scroll;
 }
-/* .app::-webkit-scrollbar {
-  width: 0 !important;
-} */
-
-/* #addNew {
-  display: flex;
-  text-align: center;
-  width: 12rem;
-  height: 6rem;
-  margin: auto;
-  margin-top: 1rem;
-  justify-content: center;
-  background-color: hotpink;
-  padding: 2rem, 2rem;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  border: 0.2rem solid black;
-} */
-
 #tasks {
   display: flex;
   justify-content: center;
@@ -112,10 +93,13 @@
   color: black;
 }
 .form-control:focus {
-  background-color: black;
   font-size: 2rem;
-
+  background-color: black;
   color: hotpink;
+}
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  font-size: 2rem;
 }
 .modal-footer {
   background-color: black;
