@@ -4,8 +4,11 @@ let selectedDateForTodos = "";
 todos = JSON.parse(localStorage.getItem("data")) || [];
 
 function main() {
+    // Startup
+    createLocalStorageIfMissing();
 
     // Todos
+
 
     // Calendar
     addEventListeners(activeDate);

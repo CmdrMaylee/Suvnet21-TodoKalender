@@ -131,6 +131,13 @@ function emptyTodoView() {
   }
 }
 
+function createLocalStorageIfMissing() {
+  if (!localStorage.getItem('data')) {
+    localStorage.setItem('data', '[]');
+    return;
+  }
+}
+
 function printTodos(date) {
   if (date) {
     createTasks(date);
