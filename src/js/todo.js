@@ -52,14 +52,24 @@ let createTasks = (date) => {
     if (date) {
       /* const filterDate = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
       const checkThisDate = x.date */
-      let filterDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-      filterDate = filterDate.getFullYear() + '-' + ('0' + (filterDate.getMonth() + 1)).slice(-2) + '-' + ('0' + filterDate.getDate()).slice(-2);
-      const checkThisDate = x.date
+      let filterDate = new Date(
+        date.getFullYear(),
+        date.getMonth(),
+        date.getDate()
+      );
+      filterDate =
+        filterDate.getFullYear() +
+        "-" +
+        ("0" + (filterDate.getMonth() + 1)).slice(-2) +
+        "-" +
+        ("0" + filterDate.getDate()).slice(-2);
+      const checkThisDate = x.date;
       if (filterDate == checkThisDate) {
         // console.log("Matched!")
         return (tasks.innerHTML += `
       <div id=${y} class="todo-task">
           <span class="fw-bold">${x.text}</span>
+          <br>
           <span class="purple">${x.date}</span>
           <p>${x.description}</p>
   
@@ -71,7 +81,7 @@ let createTasks = (date) => {
     `);
       }
     } else if (!date) {
-      console.log("No date, printing default")
+      console.log("No date, printing default");
       return (tasks.innerHTML += `
     <div id=${y} class="todo-task">
           <span class="fw-bold">${x.text}</span>
@@ -86,8 +96,8 @@ let createTasks = (date) => {
     `);
     }
   });
-  headerCountNumOfTotalTodos()
-  renderCalendarView()
+  headerCountNumOfTotalTodos();
+  renderCalendarView();
   resetForm();
 };
 
@@ -95,8 +105,8 @@ let deleteTask = (e) => {
   e.parentElement.parentElement.remove();
   data.splice(e.parentElement.parentElement.id, 1);
   localStorage.setItem("data", JSON.stringify(data));
-  headerCountNumOfTotalTodos()
-  renderCalendarView()
+  headerCountNumOfTotalTodos();
+  renderCalendarView();
   console.log(data);
 };
 
@@ -122,8 +132,6 @@ let resetForm = () => {
   createTasks();
 })();
 
-
-
 function emptyTodoView() {
   const todoList = document.getElementById("tasks");
   while (todoList.lastChild) {
@@ -132,8 +140,8 @@ function emptyTodoView() {
 }
 
 function createLocalStorageIfMissing() {
-  if (!localStorage.getItem('data')) {
-    localStorage.setItem('data', '[]');
+  if (!localStorage.getItem("data")) {
+    localStorage.setItem("data", "[]");
     return;
   }
 }
