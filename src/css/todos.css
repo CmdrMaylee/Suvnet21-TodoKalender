@@ -89,6 +89,7 @@
 }
 .modal-body {
   background-color: black;
+  user-select: none;
 }
 .form-control {
   background-color: hotpink;
