@@ -23,11 +23,9 @@
 }
 #tasks div {
   border: 0.3rem solid black;
-  background-color: 2eede;
   border-radius: 0.7rem;
   padding: 0.3rem;
   font-weight: 700;
-  display: grid;
   margin-bottom: 1rem;
 }
 #todos div .options i {
