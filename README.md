@@ -18,3 +18,13 @@ Vi har valt att anropa ett API som genererar slumpmässiga skämt från kategori
 Vi har valt att ha vår todo-lista under kalendern för att det passar vår design bättre och att vi tyckte det var mycket snyggare.
 
 Beslut togs om att hosta vår hemsida på Github Pages och vi kommer redovisa genom en enklare Power Point och en demo.
+
+
+
+### INLÄMNING
+Arbetarna på denna uppgift är...
+
+- Daniel Josefsson
+- Gentrit Hoti
+- Jimmie Kleman
+- Samt stjälen av Chuck Norris och Hideo Kojima
