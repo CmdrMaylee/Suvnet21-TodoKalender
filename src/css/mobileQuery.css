@@ -59,241 +59,222 @@
 }
 
 @media screen and (max-width: 480px) {
-/* 
+  /* 
   Chuck */
   .chuckText {
-  word-wrap: break-word !important;
-}
-.jokeBox {
-  width: auto !important;
-  height: auto !important;
-}
-.jokeBtn {
-  width: 100px !important;
-  height: 100px !important;
-  background-color: black;
-  color: hotpink;
-  margin-bottom: 0.5rem;
-  border: 0.2rem solid white;
-}
+    word-wrap: break-word !important;
+  }
+  .jokeBox {
+    width: auto !important;
+    height: auto !important;
+  }
+  .jokeBtn {
+    width: 100px !important;
+    height: 100px !important;
+    background-color: black;
+    color: hotpink;
+    margin-bottom: 0.5rem;
+    border: 0.2rem solid white;
+  }
 
-.jokeBtn:active{
-  transform: scale(1.1);
-  transition: .1s;
-}
+  .jokeBtn:active {
+    transform: scale(1.1);
+    transition: 0.1s;
+  }
 
-.modal-content-chuck {
-  position: relative !important;
-  height: 25rem !important;
-  width: 15rem !important;
-}
+  .modal-content-chuck {
+    position: relative !important;
+    height: 25rem !important;
+    width: 15rem !important;
+  }
 
-.modal-header-chuck h2 {
-  font-size: 15px !important;
-  margin-top: 15px !important;
-  margin-bottom: 15px !important;
-}
+  .modal-header-chuck h2 {
+    font-size: 15px !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+  }
 
-.modal-body-chuck {
-  margin: auto !important;
-}
-.modal-footer-chuck {
-  padding: 0rem !important;
-}
+  .modal-body-chuck {
+    margin: auto !important;
+  }
+  .modal-footer-chuck {
+    padding: 0rem !important;
+  }
 
-.closeChuck {
-  display: fixed !important;
-  width: 20px !important;
-  font-size: 20px !important;
-  border: none !important;
-  margin-top: auto !important;
-  
-}
+  .closeChuck {
+    display: fixed !important;
+    width: 20px !important;
+    font-size: 20px !important;
+    border: none !important;
+    margin-top: auto !important;
+  }
 
-img{
-  display:flex;
-  height: auto;
-  width: 100%;
- }
+  img {
+    display: flex;
+    height: auto;
+    width: 100%;
+  }
 
- img:active{
-  transform: scale(1.1);
-  transition: .1s;
-}
-
-
+  img:active {
+    transform: scale(1.1);
+    transition: 0.1s;
+  }
 
   /* Header  */
 
   /* chuck */
-.child:nth-child(1){
-  border-radius: 1.5rem;
-  width: auto;
-  height: auto;  
-}
-/* welcome text */
-.child:nth-child(2){
-  display: none !important;
-}
+  .child:nth-child(1) {
+    border-radius: 1.5rem;
+    width: auto;
+    height: auto;
+  }
+  /* welcome text */
+  .child:nth-child(2) {
+    display: none !important;
+  }
 
-/* Current date and */
-.child:nth-child(4){
-  border: none;
-  position:absolute;
-  top: 0%;
-  right: 0%; 
-}
+  /* Current date and */
+  .child:nth-child(4) {
+    border: none;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+  }
 
-p#datetimecounter{
-  font-size:15px;
-}
+  p#datetimecounter {
+    font-size: 15px;
+  }
 
+  header {
+    width: 100%;
+    height: auto !important;
+    font-family: monospace;
+    text-align: center;
+    padding: 0.5rem !important;
+    background: hotpink;
+    border: none !important;
+    padding-bottom: 2px !important;
+  }
 
-header{
-  
-  width: 100%;
-  height: auto !important;
-  font-family: monospace;
-  text-align: center;
-  padding: 0.5rem !important;
-  background: hotpink;
-  border: none !important;
-  padding-bottom: 2px !important;
-}
+  .parent {
+    border-radius: none !important;
+  }
+  .modal-header {
+    height: 52px !important;
+    font-size: 15px !important;
+  }
 
-.parent{
-border-radius: none !important;
+  .child {
+    display: grid !important;
+    font-size: 14px;
+    padding: 0;
+    margin: 2px;
+  }
 
-}
-.modal-header {
-  
-  height: 52px !important; 
-  font-size: 15px !important;
-}
-
- 
-
-
- .child{
-  display:grid !important;
-  font-size: 14px;
-  padding: 0;
-  margin:2px;
- }
-
-
-.calendar-day-row {
-
+  .calendar-day-row {
     margin: auto !important;
     padding-bottom: 6px !important;
     padding-top: 6px !important;
     display: block !important;
-    font-size: 7px;
+    font-size: 0.6rem;
     overflow: hidden;
-    
-}
+  }
 
-/* Month for Calander */
+  /* Month for Calander */
 
-.month-head-container {
-  
-  border-radius: 10px;
-  border: 2px solid hotpink;
-  padding: 10px;
-}
-.year-and-month {
-  display: flex !important;
-  font-size: 15px !important;
-  padding: 0px !important;
-   
-}
-.content-inner{
-  padding: 0;
-}
+  .month-head-container {
+    border-radius: 10px;
+    border: 2px solid hotpink;
+    padding: 10px;
+  }
+  .year-and-month {
+    display: flex !important;
+    font-size: 15px !important;
+    padding: 0px !important;
+  }
+  .content-inner {
+    padding: 0;
+  }
 
-.material-icons.md-48 {
-  font-weight: 15px !important;
-  font-size: 15px !important;
-  width: auto;
-  height: auto;
-  max-width: 30px;
-  
-}
+  .material-icons.md-48 {
+    font-weight: 15px !important;
+    font-size: 15px !important;
+    width: auto;
+    height: auto;
+    max-width: 30px;
+  }
 
-.material-icons.md-48:active{
-  transform: scale(1.3);
-  transition: .1s;
-}
+  .material-icons.md-48:active {
+    transform: scale(1.3);
+    transition: 0.1s;
+  }
 
+  /* Calender */
 
-/* Calender */
-
-.day-block {
-    height: 3rem !important; 
+  .day-block {
+    height: 3rem !important;
     font-size: 11px !important;
     display: block !important;
-}
+  }
 
-.todo-count {
-    color:hotpink !important;
+  .todo-count {
+    color: hotpink !important;
     font-size: 10px !important;
     width: 15px !important;
-    height:  auto !important;
+    height: auto !important;
     margin-right: 0.1rem !important;
     border-radius: 0px !important;
     background-color: rgb(0, 0, 0) !important;
     padding-right: 0px !important;
     padding-top: 0.5px;
-    position:relative !important; 
-    
+    position: relative !important;
+  }
+
+  /* Todoo bottom */
+
+  .addTodo {
+    width: auto !important;
+    height: auto !important;
+    font-size: 15px !important;
+    margin-top: 1rem;
+    border: 0.4rem solid black;
+    overflow-y: scroll;
+  }
+
+  .add-todo-title {
+    font-size: 15px !important;
+    height: 2rem !important;
+    width: 19rem !important;
+  }
+
+  .add-todo-title:active {
+    transform: scale(1.1);
+    transition: 0.1s;
+  }
+
+  .add-button {
+    display: flex !important;
+    font-size: 16px !important;
+    height: 38px !important;
+    width: 38px !important;
+    align-items: center;
+    padding-right: 40px !important;
+  }
+  .add-button:active {
+    transform: scale(1.1);
+    transition: 0.1s;
+  }
+  .add-button:hover {
+    background-color: black;
+    color: hotpink;
+    border: 0.2rem solid hotpink;
+  }
+
+  .month-head-container {
+    width: auto;
+  }
+
+  .main-center {
+    max-width: 100%;
+  }
 }
-
-/* Todoo bottom */
-
-.addTodo {
-
-  width: auto !important;
-  height: auto !important;
-  font-size: 15px !important;
-  margin-top: 1rem;
-  border: 0.4rem solid black;
-  overflow-y: scroll;
-}
-
-.add-todo-title {
-  font-size: 15px !important;
-  height: 2rem !important;
-  width: 19rem !important;
-}
-
-.add-todo-title:active{
-  transform: scale(1.1);
-  transition: .1s;
-}
-
-
-.add-button {
-  display: flex !important;
-  font-size: 16px !important;
-  height: 38px !important;
-  width: 38px !important;
-  align-items: center;
-  padding-right: 40px !important;
-}
-.add-button:active{
-  transform: scale(1.1);
-  transition: .1s;
-}
-.add-button:hover {
-  background-color: black;
-  color: hotpink;
-  border: 0.2rem solid hotpink;
-}
-
-
-}
-
-
-
-
-
